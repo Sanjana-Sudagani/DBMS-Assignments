@@ -220,7 +220,7 @@ Query OK, 1 row affected (0.01 sec)
 
 mysql> INSERT INTO EventReq(eventno, dateheld, datereq, facno, custno, Dateauth, status, estcost, estaudience, budno)
     -> VALUES('E101', str_to_date('26-OCT-2018', '%d-%b-%Y'), str_to_date('28-JUL-2018', '%d-%b-%Y'), 'F100', 'C100', str_to_date('', '%d-%b-%Y'), 'Pending', 5000.00, 80000, 'B1000'); 
-ERROR 1411 (HY000): Incorrect datetime value: '' for function str_to_date
+
 mysql> INSERT INTO EventReq(eventno, dateheld, datereq, facno, custno, Dateauth, status, estcost, estaudience, budno)
     -> VALUES('E102', str_to_date('14-SEP-2018', '%d-%b-%Y'), str_to_date('28-JUL-2018', '%d-%b-%Y'), 'F100', 'C100', str_to_date('31-JUL-2018', '%d-%b-%Y'), 'Approved', 5000.00, 80000, 'B1000');
 Query OK, 1 row affected (0.01 sec)
@@ -349,7 +349,7 @@ Query OK, 1 row affected (0.01 sec)
 
 mysql> INSERT INTO EventPlan(planno, Eventno, workdate, Notes, activity, empno)
     -> VALUES('P299', 'E101', str_to_date('26-Oct-2018', '%d-%b-%Y'),'', 'Operation', 'E101');
-ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`assignment1`.`EventPlan`, CONSTRAINT `FKEventPlanEventNo` FOREIGN KEY (`Eventno`) REFERENCES `Eventrequest` (`eventno`))
+
 mysql> INSERT INTO EventPlan(planno, Eventno, workdate, Notes, activity, empno)
     -> VALUES('P349', 'E106', str_to_date('12-Dec-2018', '%d-%b-%Y'),'', 'Cleanup', 'E101');
 Query OK, 1 row affected (0.01 sec)
