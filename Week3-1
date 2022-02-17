@@ -51,6 +51,7 @@ mysql> select *
 
 
 4.List the event requests with a status of “Approved” or “Denied” and an authorized date in July 2018. Include the event number, authorization date, and status in the output. (Hint: see the examples in Module 4 for date constants in Oracle and MySQL.)
+
 mysql> SELECT   er.eventno,   er.Dateauth,   er.status FROM Eventrequest AS er WHERE (er.status = 'Approved' OR er.status = 'Denied') AND er.Dateauth BETWEEN '2013-07-01' AND '2013-07-31';
 Empty set (0.00 sec)
 

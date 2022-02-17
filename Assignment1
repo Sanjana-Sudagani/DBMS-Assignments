@@ -1,5 +1,4 @@
-mysql> create database assignment1
-    -> ;
+mysql> create database assignment1;
 Query OK, 1 row affected (0.01 sec)
 
 mysql> use assignment1;

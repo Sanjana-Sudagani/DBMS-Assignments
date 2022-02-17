@@ -52,6 +52,8 @@ Its primary key is a combination of DateSent and LoanNo.
 
 5. Convert the ERD shown in Figure 2 into tables.  List the conversion rules used and table design. For each table, you should list the primary key, foreign keys, other columns, and NOT NULL constraints for foreign keys if necessary. You do not need to write CREATE TABLE statements.
 
+The following table conversion uses the Entity Type Rule and the 1-M Rule.
+
 Account(Acctid, AcctName, Balance, Decomposed)
 
 Primary Key: Acctid
@@ -61,12 +63,16 @@ Columns: Attributes listed
 
 6. Convert the ERD shown in Figure 3 into tables.  List the conversion rules used and table design. For each table, you should list the primary key, foreign keys, other columns, and NOT NULL constraints for foreign keys if necessary. You do not need to write CREATE TABLE statements.
 
+The following table conversion uses the Entity Type Rule and the M-N Rule.
+
 Owner(OwnId, OwnName, OwnPhone)
 
 Primary Key: OwnId
+
 Property(PropId, BldgName, UnitNo, Bdrms)
 
 Primary Key: PropId
+
 Shares(PropId, OwnId, StartWeek, EndWeek)
 
 Primary Key: PropId and OwnId
